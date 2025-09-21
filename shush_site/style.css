@@ -1,0 +1,53 @@
+/* ===== style.css ===== */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* FULL-SCREEN BACKGROUND + CENTER CONTENT */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Background settings */
+  background-image: url("background.jpg");   /* <-- change if your file name differs */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  font-family: Arial, sans-serif;
+}
+
+/* BIG BUTTON */
+button {
+  position: absolute;
+  bottom: 30px;
+  padding: 20px 40px;
+  font-size: 22px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover,
+button:active {
+  background: rgba(255, 255, 255, 1);
+}
+
+/* HAND IMAGE */
+#hand {
+  position: absolute;
+  top: 40%;                     /* vertical position on screen */
+  left: 50%;                     /* horizontally center */
+  transform: translateX(-50%);   /* true horizontal centering */
+  width: 120px;                  /* adjust size as needed */
+  height: auto;
+  pointer-events: none;          /* clicks pass through */
+  display: none;                 /* hidden until JS shows it */
+}
